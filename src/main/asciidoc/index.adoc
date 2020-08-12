@@ -1,0 +1,125 @@
+= Pharma Order Service Docs
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+
+An Online Pharmacy Network Application
+
+GET ORDER
+
+One showing how to make a request using cURL:
+
+include::{snippets}/v1/order-get/curl-request.adoc[]
+
+One showing the HTTP request:
+
+include::{snippets}/v1/order-get/http-request.adoc[]
+
+And one showing the HTTP response:
+
+include::{snippets}/v1/order-get/http-response.adoc[]
+
+Response Body:
+include::{snippets}/v1/order-get/response-body.adoc[]
+
+Response Fields:
+include::{snippets}/v1/order-get/response-fields.adoc[]
+
+GET ORDERS FROM PHARMACY
+
+One showing how to make a request using cURL:
+
+include::{snippets}/v1/pharmacy-order-get/curl-request.adoc[]
+
+One showing the HTTP request:
+
+include::{snippets}/v1/pharmacy-order-get/http-request.adoc[]
+
+And one showing the HTTP response:
+
+include::{snippets}/v1/pharmacy-order-get/http-response.adoc[]
+
+Response Body:
+include::{snippets}/v1/pharmacy-order-get/response-body.adoc[]
+
+
+GET ORDERS FROM OWNER
+
+One showing how to make a request using cURL:
+
+include::{snippets}/v1/owner-order-get/curl-request.adoc[]
+
+One showing the HTTP request:
+
+include::{snippets}/v1/owner-order-get/http-request.adoc[]
+
+And one showing the HTTP response:
+
+include::{snippets}/v1/owner-order-get/http-response.adoc[]
+
+Response Body:
+include::{snippets}/v1/owner-order-get/response-body.adoc[]
+
+
+NEW ORDER
+
+One showing how to make a request using cURL:
+
+include::{snippets}/v1/order-post/curl-request.adoc[]
+
+One showing the HTTP request:
+
+include::{snippets}/v1/order-post/http-request.adoc[]
+
+And one showing the HTTP response:
+
+include::{snippets}/v1/order-post/http-response.adoc[]
+
+Response Body:
+include::{snippets}/v1/order-post/response-body.adoc[]
+
+Request Fields:
+include::{snippets}/v1/order-post/request-fields.adoc[]
+
+
+UPDATE ORDER
+
+One showing how to make a request using cURL:
+
+include::{snippets}/v1/order-put/curl-request.adoc[]
+
+One showing the HTTP request:
+
+include::{snippets}/v1/order-put/http-request.adoc[]
+
+And one showing the HTTP response:
+
+include::{snippets}/v1/order-put/http-response.adoc[]
+
+Response Body:
+include::{snippets}/v1/order-put/response-body.adoc[]
+
+Request Fields:
+include::{snippets}/v1/order-put/request-fields.adoc[]
+
+
+DELETE ORDER
+
+One showing how to make a request using cURL:
+
+include::{snippets}/v1/order-delete/curl-request.adoc[]
+
+One showing the HTTP request:
+
+include::{snippets}/v1/order-delete/http-request.adoc[]
+
+And one showing the HTTP response:
+
+include::{snippets}/v1/order-delete/http-response.adoc[]
+
+Response Body:
+include::{snippets}/v1/order-delete/response-body.adoc[]
+
+Request Fields:
+include::{snippets}/v1/order-delete/path-parameters.adoc[]
+
