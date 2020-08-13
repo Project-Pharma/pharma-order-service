@@ -40,6 +40,5 @@ public class OrderDto {
     @Null
     private UUID deliveryDetailsId;
 
-    @NotNull
     private OrderStatus orderStatus;
 }

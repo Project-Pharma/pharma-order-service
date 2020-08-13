@@ -4,6 +4,7 @@ import com.inoastrum.pharmaorderservice.domain.Order;
 import com.inoastrum.pharmaorderservice.services.DeliveryDetailsService;
 import com.inoastrum.pharmaorderservice.services.PrescriptionService;
 import com.inoastrum.pharmaorderservice.web.model.OrderDto;
+import com.inoastrum.pharmaorderservice.web.model.OrderStatus;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public abstract class OrderMapperDecorator implements OrderMapper {
@@ -15,6 +16,16 @@ public abstract class OrderMapperDecorator implements OrderMapper {
     @Autowired
     public void setDelegate(OrderMapper delegate) {
         this.delegate = delegate;
+    }
+
+    @Autowired
+    public void setDeliveryDetailsService(DeliveryDetailsService deliveryDetailsService) {
+        this.deliveryDetailsService = deliveryDetailsService;
+    }
+
+    @Autowired
+    public void setPrescriptionService(PrescriptionService prescriptionService) {
+        this.prescriptionService = prescriptionService;
     }
 
     @Override
@@ -32,6 +43,10 @@ public abstract class OrderMapperDecorator implements OrderMapper {
 
     @Override
     public Order orderDtoToOrder(OrderDto orderDto) {
+        if (orderDto.getOrderStatus() == null) {
+            orderDto.setOrderStatus(OrderStatus.ORDER_CREATED);
+        }
+
         Order order = delegate.orderDtoToOrder(orderDto);
 
         if (orderDto.getPrescriptionId() != null)
@@ -40,6 +55,6 @@ public abstract class OrderMapperDecorator implements OrderMapper {
         if (orderDto.getDeliveryDetailsId() != null)
             order.setDeliveryDetails(deliveryDetailsService.findDeliveryDetailsById(orderDto.getDeliveryDetailsId()));
 
-        return null;
+        return order;
     }
 }
