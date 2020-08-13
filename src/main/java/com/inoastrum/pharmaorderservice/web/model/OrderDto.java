@@ -28,7 +28,7 @@ public class OrderDto {
     @Null
     private OffsetDateTime lastModifiedDate;
 
-    @NotNull
+    @Null
     private UUID prescriptionId;
 
     @NotNull
@@ -37,8 +37,8 @@ public class OrderDto {
     @NotNull
     private UUID ownerId;
 
-    @NotNull
-    private DeliveryDetailsDto deliveryDetailsId;
+    @Null
+    private UUID deliveryDetailsId;
 
     @NotNull
     private OrderStatus orderStatus;

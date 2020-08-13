@@ -29,7 +29,7 @@ public class DeliveryDetailsDto {
     @Null
     private OffsetDateTime lastModifiedDate;
 
-    @NotEmpty
+    @NotNull
     private UUID orderId;
 
     @NotEmpty
