@@ -30,6 +30,9 @@ public class PrescriptionDto {
     @Null
     private OffsetDateTime lastModifiedDate;
 
+    @NotNull
+    private UUID orderId;
+
     private List<URI> prescriptionImages;
 
     private Long nationalIdNo;

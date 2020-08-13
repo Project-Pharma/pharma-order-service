@@ -30,6 +30,9 @@ public class DeliveryDetailsDto {
     private OffsetDateTime lastModifiedDate;
 
     @NotEmpty
+    private UUID orderId;
+
+    @NotEmpty
     private String name;
 
     @NotEmpty

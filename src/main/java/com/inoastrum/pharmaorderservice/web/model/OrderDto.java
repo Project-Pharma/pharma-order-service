@@ -38,7 +38,7 @@ public class OrderDto {
     private UUID ownerId;
 
     @NotNull
-    private DeliveryDetailsDto deliveryDetails;
+    private DeliveryDetailsDto deliveryDetailsId;
 
     @NotNull
     private OrderStatus orderStatus;
