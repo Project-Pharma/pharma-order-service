@@ -43,6 +43,5 @@ public class PrescriptionDto {
     
     private OffsetDateTime prescriptionDate;
 
-    @NotNull
     private Boolean approved;
 }

@@ -36,13 +36,13 @@ public class Order {
     @UpdateTimestamp
     private Timestamp lastModifiedDate;
 
-    @OneToOne(mappedBy = "order", fetch = FetchType.LAZY)
+    @OneToOne(mappedBy = "order", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private Prescription prescription;
 
     private UUID pharmacyId;
     private UUID ownerId;
 
-    @OneToOne(mappedBy = "order", fetch = FetchType.LAZY)
+    @OneToOne(mappedBy = "order", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private DeliveryDetails deliveryDetails;
 
     private String orderStatus;

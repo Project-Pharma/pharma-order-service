@@ -1,7 +1,9 @@
 package com.inoastrum.pharmaorderservice.web.controller;
 
 import com.inoastrum.pharmaorderservice.services.OrderService;
+import com.inoastrum.pharmaorderservice.web.model.DeliveryDetailsDto;
 import com.inoastrum.pharmaorderservice.web.model.OrderDto;
+import com.inoastrum.pharmaorderservice.web.model.PrescriptionDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -22,6 +24,16 @@ public class OrderController {
     @GetMapping("/{orderId}")
     public ResponseEntity<OrderDto> getOrderById(@PathVariable UUID orderId) {
         return new ResponseEntity<>(orderService.findOrderDtoById(orderId), HttpStatus.OK);
+    }
+
+    @GetMapping("/{orderId}/prescription")
+    public ResponseEntity<PrescriptionDto> getPrescriptionByOrder(@PathVariable UUID orderId) {
+        return new ResponseEntity<>(orderService.findPrescriptionDtoByOrderId(orderId), HttpStatus.OK);
+    }
+
+    @GetMapping("/{orderId}/deliveryDetails")
+    public ResponseEntity<DeliveryDetailsDto> getDeliveryDetailsByOrder(@PathVariable UUID orderId) {
+        return new ResponseEntity<>(orderService.findDeliveryDetailsDtoByOrderId(orderId), HttpStatus.OK);
     }
 
     @PostMapping
